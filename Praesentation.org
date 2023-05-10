@@ -1,0 +1,837 @@
+#+title: Diskret matematik og differentialligninger 
+#+subtitle: 
+#+author: 
+#+date: 
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: sky
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background:
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Diskret matematik
+
+** Hvorfor skal vi have det?
+
+** Bare fordi
+
+I kan få opgaver til skriftlig eksamen som ligner denne:
+
+#+attr_html: :height 400px
+[[file:img/2021-12-06_10-38-28_screenshot.png]]
+
+** Og fordi
+
+I skal bruge det i jeres matematikprojekt om krig og Lanchesters love.
+
+
+#+DOWNLOADED: screenshot @ 2021-12-06 10:42:46
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2021-12-06_10-42-46_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2021-12-06 10:42:58
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2021-12-06_10-42-58_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2021-12-06 10:43:05
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2021-12-06_10-43-05_screenshot.png]]
+
+
+* Rekursionsligninger
+
+** Førsteordens rekursionsligninger
+
+#+reveal_html: <div style="font-size: 60%;">
+#+DOWNLOADED: screenshot @ 2022-01-02 12:37:34
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-02_12-37-34_screenshot.png]]
+
+Første orden betyder, at man kun behøver at kende én tidligere værdi, for at kunne udregne den efterfølgende. Hvis man skal kende to foregående værdier for at kunne udregne den næste, er der tale om en andenordens rekursionsligning. I kan selv gætte jer til, hvad højere ordener kræver.
+
+#+reveal: split
+- Læs Eksempel 2 og 3 på side 5 og 6.
+
+- Sørg for at have styr på, at kunne opskrive et udtryk for $f(y_n,n)$ for n!.
+
+- Brug jeres viden til at kunne besvare *opgave 1* på side 6.
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:18:26
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-18-26_screenshot.png]]
+
+
+#+reveal: split
+*Begyndelsesbetingelser og entydighed*
+
+#+reveal_html: <div style="font-size: 60%;">
+#+DOWNLOADED: screenshot @ 2022-01-02 12:58:29
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-02_12-58-29_screenshot.png]]
+
+Ved at beslutte sig for, at der skal være en fast /begyndelsesbetingelse/ er der kun en løsning til rekursionsligningerne.
+
+- Følg eksempel 4 på side 7.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Løs opgave 2 og 3 på side 8.
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:19:14
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-19-14_screenshot.png]]
+
+
+** Førsteordens *lineære* rekursionsligninger
+#+reveal_html: <div style="font-size: 60%;">
+
+#+DOWNLOADED: screenshot @ 2022-01-02 20:02:43
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-02_20-02-43_screenshot.png]]
+
+- Find nogle eksempler på rekursionsligninger, som opfylder disse betingelser, og nogen, som ikke gør, i teksten.
+- Læg mærke til forskellen på /homogen/ og /inhomogen/.
+
+#+reveal: split
+
+#+reveal_html: <div style="font-size: 60%;">
+*Samtlige løsninger*
+- Nogle gange er det muligt at bestemme $y_n$ til et bestemt $n$ uden at udregne alle de forrige $n-1$ værdier først.
+
+#+DOWNLOADED: screenshot @ 2022-01-02 20:59:12
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-02_20-59-12_screenshot.png]]
+
+- Læs eksempel 5 på side 9 og 10 for at få en forklaring til dette.
+
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Læs eksempel 6 på side 10 for at en idé til, hvordan konstanten $k$ bestemmes ud fra en begyndelsesbetingelse.
+- (Det svarer lidt til at bestemme en specifik værdi for integrationskonstant i et ubestemt integrale).
+- Løs opgave 4 på side 11.
+
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:19:56
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-19-56_screenshot.png]]
+
+- Læs den efterfølgende opsummering.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+*Samtlige løsninger til den /inhomogene/ førsteordens lineære rekursionsligning*
+
+#+DOWNLOADED: screenshot @ 2022-01-02 21:07:04
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-02_21-07-04_screenshot.png]]
+
+- $z_n$ kaldes en /partikulær løsning/.
+- Samtlige løsninger til den inhomogene førsteordens lineære rekursionsligning er lig /summen/ af samtlige løsninger til den tilsvarende /homogene/ rekursionsligning og én partikulær løsning til den inhomogene rekursionsligning.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+*Hvordan finder man så en partikulær løsning?*
+
+- I praksis kan man mange gange slippe afsted med at /gætte/ sig til en løsning.
+- Læs eksempel 7 side 12 for en /gættemetode/ og løs selv opgave 5 også på side 12.
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:20:49
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-20-49_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:20:57
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-20-57_screenshot.png]]
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Nogle gange kan man ikke altid bare gætte, og så må man bruge andre strategier. Løs opgave 6 side 13 for at blive klogere på dette.
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:22:43
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-22-43_screenshot.png]]
+
+* Numerisk nulpunktsbestemmelse
+- Mange ligninger kan løses symbolsk/algebraisk, men ikke alle.
+- De ligninger, som ikke har symbolske løsninger kaldes /transcendente/ ligninger.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+  
+- Et eksempel kunne være
+
+  $$e^x=-x$$
+  #+DOWNLOADED: screenshot @ 2022-01-03 09:00:49
+  #+attr_html: :width 600px
+  #+attr_latex: :width 7cm
+  [[file:img/2022-01-03_09-00-49_screenshot.png]]
+
+#+reveal: split
+- Transcendente ligninger skal i stedet løses /numerisk/.
+- En numerisk løsningsmetode er /Newtons metode/.
+* Newtons metode
+#+reveal_html: <div style="font-size: 60%;">
+- Den grundlæggende idé tager udgangspunkt i /tangenten/ til en funktion f(x).
+
+  $$T_{x_0} (x) = f'\left(x_0\right) \cdot \left( x - x_0 \right) + f(x_0)$$
+
+- I et punkt $(x_0;y_0)$ går tangenten gennem punktet og ligner /tilnærmelsesvis/ funktionen f(x), når x er tæt på $x_0$.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+#+DOWNLOADED: screenshot @ 2022-01-03 09:14:01
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-14-01_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:16:35
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-16-35_screenshot.png]]
+
+- Læs fra midt side 14 til toppen af side 17 for forklaringer.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Løs opgave 7 på side 17
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:29:48
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-29-48_screenshot.png]]
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Læs eksempel 9 side 17 og 18.
+- Løs opgave 8 side 19, som tager udgangspunkt i eksempel 9.
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:32:54
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-32-54_screenshot.png]]
+
+- Løs opgave 9 side 19
+
+#+DOWNLOADED: screenshot @ 2022-01-03 09:33:47
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_09-33-47_screenshot.png]]
+
+* Tilnærmede løsninger af differentialligninger
+#+reveal_html: <div style="font-size: 60%;">
+- I har hørt det mange gange; Langt fra alle differentialligninger har en symbolsk/algebraisk løsning.
+- I stedet kan disse løses /numerisk/.
+- Den simpleste numeriske løsningsmetode til en førsteordens differentialligning hedder /Eulers metode/.
+
+** Eulers metode
+#+reveal_html: <div style="font-size: 60%;">
+
+#+DOWNLOADED: screenshot @ 2022-01-03 10:35:23
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-03_10-35-23_screenshot.png]]
+
+- Dette siger dog ikke så meget, så læs eksempel 10 side 20 - 22 i stedet for.
+- Læg mærke til, at Eulers metode /altid/ vil ramme ved siden af det "rigtige".
+- Ved at gøre skridtlængden h mindre, bliver fejlen dog også mindre.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Løs nu opgave 10 på side 23
+
+
+#+DOWNLOADED: screenshot @ 2022-01-05 09:51:23
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-05_09-51-23_screenshot.png]]
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- Læs først eksempel 11 på side 23, som bl.a. diskuterer at nogle differentialligninger/rekursionsligninger kan løses symbolsk, men at man ikke generelt kan opskrive en formel til bestemmelse af y-værdier ud fra n.
+- Læs nu eksempel 12 side 24, som beskriver en rekursionsligning, der har en direkte formel som løsning.
+- Til sidst, løs opgave 11 på side 24.
+
+
+#+DOWNLOADED: screenshot @ 2022-01-05 09:59:38
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-01-05_09-59-38_screenshot.png]]
+
+** Alternativ forklaring af Eulers metode
+#+reveal_html: <div style="font-size: 60%;">
+- Man kan også forklare Eulers metode på følgende måde.
+- Der er mange differentialligninger, som har tiden som den uafhængige variabel, og kan skrives Sommerferie
+
+  $$\frac{dy}{dt} = f(t,y)$$
+
+- Denne differentialligning kan vi i stedet skrive som en /differensligning/
+
+  $$\frac{\Delta y}{\Delta t} = f(t,y)$$
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+$$\frac{\Delta y}{\Delta t} = f(t,y)$$
+- Vi husker at $\Delta y = y_1 - y_0$
+- Eller mere generelt $\Delta y = y_{n+1} - y_n$
+- $\Delta t$ er skridtlængden og svarer til $h$ fra tidligere.
+
+$$\frac{y_{n+1}-y_n}{\Delta t} = f(t,y)$$
+
+
+- Nu kan $y_{n+1}$ isoleres
+
+\begin{align*}
+\frac{y_{n+1}-y_n}{\Delta t} &= f(t,y) \\
+y_{n+1} - y_n &= f(t,y) \cdot \Delta t \\
+y_{n+1} &= f(t,y) \cdot \Delta t + y_n
+\end{align*}
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+$$y_{n+1} = f(t,y) \cdot \Delta t + y_n$$
+#+end_quote
+For at beregne den næste y-værdi skal man altså
+- udregne værdien for $f(t,y)$ i det nuværende (tids)punkt, hvor de nuværende værdier for t og y indsættes
+- gang dette med skridtlængden (som gerne skal være så lille som mulig, for at mindske fejl.
+- læg dette til den forrige y-værdi.
+
+
+Så simpelt er det. :)
+* Differentialligninger
+* Hvorfor skal vi undervises i differentialligninger?
+
+#+reveal: split
+
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/ifbaAqfqpc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+Linket er: https://youtu.be/ifbaAqfqpc4
+
+#+reveal: split
+Resten af siderne er bare genbrug fra tidligere, da vi arbejdede med differentialligninger sidst.
+
+* Forskellige typer
+** Eksponentiel vækst
+#+reveal_html: <div style="font-size: 60%;">
+Differentialkvotienten er /proportionel/ med funktionen selv.
+
+Differentialligning
+$$y'=k \cdot y$$
+
+Løsning
+$$y=c \cdot e^{k\cdot x}$$
+
+$k$ er vækstkonstanten
+
+$c$ er en integrationskonstant
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Grafiske eksempler
+
+#+attr_html: :width 1200px
+[[./img/eksp_vaekst.png]]
+
+** Forskudt eksponentiel vækst
+#+reveal_html: <div style="font-size: 60%;">
+Differentialkvotienten er /lineært afhængig/ af funktionen selv.
+
+Differentialligning
+$$y'=a\cdot y +b$$
+
+Løsning
+$$y=-\frac{b}{a} + c\cdot e^{a\cdot x}$$
+
+$- \frac{b}{a}$ angiver en vandret asymptote, som kan parallelforskyde en "almindelige" eksponentialfunktion og eller ned ad y-aksen.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Grafiske eksempler
+
+#+attr_html: :width 1200px
+[[./img/forskudt_eksp_vaekst.png]]
+
+** Logistisk vækst
+#+reveal_html: <div style="font-size: 60%;">
+Eksponentiel vækst med begrænsning.
+
+Tre forskellige differentialligninger til at beskrive den samme vækst.
+|   | Diffligning                                        | Løsning                                    |
+|---+----------------------------------------------------+--------------------------------------------|
+| 1 | $y' = k \cdot y (a - y)$                           | $y=\frac{a}{1+c \cdot e^{-k a x}}$         |
+| 2 | $y' = y (b - a y)$                                 | $y=\frac{\frac{b}{a}}{1+c e^{-b x}}$       |
+| 3 | $y' = k \cdot y \cdot \frac{(K - y)}{K}$           | $y=\frac{K}{1+c\cdot e^{-k \cdot x}}$      |
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Særligt nr. 3 giver fysisk mening.
+
+Differentialligning 
+$$y' = k \cdot y \cdot \frac{(K - y)}{K}$$
+
+Løsning
+$$y=\frac{K}{1+c\cdot e^{-k \cdot x}}$$
+
+$k$ er den samme  vækstkonstant, som for almindelig eksponentiel vækst, mens $K$ er maksimal værdi for $y$. $y=K$ og $y=0$ er altså begge vandrette asymptoter, som begrænser væksten.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Grafiske eksempler
+
+#+attr_html: :width 1200px
+[[./img/logistisk_vaekst.png]]
+
+* Tjek at løsningerne faktisk er sande
+#+reveal_html: <div style="font-size: 60%;">
+|   | Diffligning                             | Løsning                                |
+|---+-----------------------------------------+----------------------------------------|
+| 1 | $y'=k \cdot y$                          | $y=c \cdot e^{k\cdot x}$               |
+| 2 | $y'=a\cdot y +b$                        | $y=-\frac{b}{a} + c\cdot e^{a\cdot x}$ |
+| 3 | $y' = k \cdot y (a - y)$                | $y=\frac{a}{1+c \cdot e^{-k a x}}$     |
+| 4 | $y' = y (b - a y)$                      | $y=\frac{\frac{b}{a}}{1+c e^{-b x}}$   |
+| 5 | $y' = k \cdot y \cdot \frac{(K- y)}{K}$ | $y=\frac{K}{1+c\cdot e^{-k \cdot x}}$  |
+|---+-----------------------------------------+----------------------------------------|
+
+- Indsæt de tilhørende løsninger i de respektive differentialligninger, og tjek om ligningen er /sand/.
+- Der skal altså differentieres på venstre side.
+
+
+* Grafisk Undersøgelse
+
+** Linjeelementer
+#+reveal_html: <div style="font-size: 60%;">
+Et linje element er et kendt punkt på en graf med tilhørende hældning. Hvis $x_0$ er et kendt x-koordinat så kan et linjeelement skrives som
+
+$$(x_0\,,\,f(x_0) \,;\, f'(x_0))$$
+*** Eksempel
+#+reveal_html: <div style="font-size: 60%;">
+For differentialligningen
+
+$$y' = 2\cdot y -10$$
+
+skal vi finde linjeelementerne i hhv A(-3,5) , B(-2,8) , C(1,3) og D(2,-2).
+
+#+attr_reveal: :frag (appear)
+- A: $y'=2 \cdot 5-10 = 0$ Ergo $(-3\,,\,-5\,;\, 0)$
+- B: $y'=2 \cdot 8 -10 = 6$ Ergo $(-2\,,\,8\,;\, 6)$
+- C: $y'=2 \cdot 3 -10 = -4$ Ergo $(1\,,\,3\,;\, -4)$
+- D: $y'=2 \cdot (-2) -10 = -14$ Ergo $(2\,,\,-2\,;\, -14)$
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Grafisk er det nemmest at anvende geogebras funktion =retningsfelt=.
+
+=Retningsfelt(2*y-10,10)= giver følgende:
+
+#+attr_html: :width 600px
+[[./img/retningsfelt.png]]
+* Løsning af differentialligninger
+** 1. år på uni 
+#+reveal_html: <div style="font-size: 40%;">
+#+begin_quote
+When you battle differential equations you better wear
+
+S H I E L D S
+#+end_quote
+
+#+begin_export html
+<iframe
+width="600"
+height="400"
+src="https://www.youtube.com/embed/jb9U-ZOlvDs"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+
+Linket er: https://youtu.be/jb9U-ZOlvDs
+
+#+reveal: split
+Vi kommer til at arbejde med.
+#+ATTR_REVEAL: :frag (none fade-out fade-out fade-out none none fade-out) :frag_idx (1 1 1 1 1 1 1)
+- *S* eparable
+- *H* omogeneous
+- *I* ntegrating factor
+- *E* xact
+- *L* inear
+- *D* irect
+- *S* ubstitution
+
+#+reveal: split
+Men i rækkefølgen
+- *D* irect
+- *S* eparable
+- *L* inear
+
+** Direkte løsninger
+#+reveal_html: <div style="font-size: 60%;">
+Hvis højresiden af differentialligningen ikke afhænger af $y$, men kun af funktioner af x eller konstanter, kan differentialligningen løses ved (simpel) integration. Altså på formen:
+$$y' = f(x)$$
+*** Eksempel
+#+reveal_html: <div style="font-size: 60%;">
+Vi skal løse
+$$\frac{dy}{dx} = 4 e^x + \sin (x)$$
+
+#+attr_reveal: :frag (appear)
+$$\int \frac{dy}{dx} \,dx = \int 4 e^x + \sin (x)\, dx$$
+#+attr_reveal: :frag (appear)
+$$y = \int 4 e^x + \sin (x)\, dx$$
+#+attr_reveal: :frag (appear)
+$$y = 4 e^x - \cos (x) + c$$
+
+*** Opgaver *Team-par-solo*
+#+reveal_html: <div style="font-size: 60%;">
+Bestem den fuldstændige løsning til følgende differentialligninger:
+
+1. $\frac{d}{dx}f = \cos \left( x \right)$
+2. $f'(x) = 2 x^5$
+3. $\frac{d}{dx}f = k$
+4. $\frac{d}{dt}f(t) = 6t$
+5. $\frac{d}{dx}f = 2x^3+4 x^{-2}$
+*** Opgaver *Chef og sekretær*
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 60%">
+#+begin_quote
+1. trin: Chefen giver trin-for-trin instruktioner til sekretæren
+2. trin: Sekretæren nedskriver chefens løsning, eller udfører hans instruktion trin for trin.
+3. trin: Sektretæren roser chefen, hvis instruktionen fører til en løsning. Ellers hjælper sektretæren med at få løst opgaven og roser stadig chefen.
+4. trin: Roller byttes.
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 40%">
+Bestem den fuldstændige løsning til følgende differentialligninger:
+
+1. $\frac{d}{dx}f = e^x$
+2. $\frac{d}{dx}f = 3 \sin \left( x \right)$
+3. $2 \cdot f'(x)= x^{-5}+3$
+4. $\frac{d}{dx}f = \sqrt{x-8}$
+#+reveal_html: </div>
+** Separation af variable
+#+reveal_html: <div style="font-size: 60%;">
+Hvis differentialligningen kan skrives op som
+
+$$\frac{d y}{d x} = f(y)\cdot g(x)$$
+
+kan den løses sådan her:
+
+$$\int \frac{1}{f(y)} \, dy = \int g(x) \, dx$$
+*** Eksempel
+#+reveal_html: <div style="font-size: 60%;">
+Vi skal løse følgende differentialligning med tilhørende betingelse:
+
+$$\frac{d y}{dx} = 2 x y^2 \,,\, y(2)=1$$
+
+#+attr_reveal: :frag (appear)
+Vi separerer med y'erne på venstre side og x'erne på højre
+
+#+attr_reveal: :frag (appear)
+$$\int \frac{1}{y^2} \, dy = \int 2 x \, dx$$
+#+attr_reveal: :frag (appear)
+og integrerer
+#+attr_reveal: :frag (appear)
+$$\int \frac{1}{y^2} \,dx = \int y^{-2}\,dx = \frac{y^{-1}}{-1} + k_1 = - \frac{1}{y} + k_1$$
+
+#+attr_reveal: :frag (appear)
+$$\int 2x \,dx = x^2 + k_2$$
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Det hele sættes sammen igen.
+#+attr_reveal: :frag (appear)
+$$- \frac{1}{y}+k_1 = x^2+k_2$$
+#+attr_reveal: :frag (appear)
+Integrationskonstanterne lægges sammen til én konstant $k$ og y isoleres
+#+attr_reveal: :frag (appear)
+$$y=\frac{-1}{x^2+k}$$
+#+attr_reveal: :frag (appear)
+Den partikulære løsning findes ved at indsætte oplysningerne fra opgaven i den fundne generelle løsning og isolere $k$.
+#+attr_reveal: :frag (appear)
+$$1 = \frac{-1}{2^2+k}\to 4 + k = -1 \to k = -5 $$
+#+attr_reveal: :frag (appear)
+Den partikulære løsning er da:
+$$y = f(x) = \frac{-1}{x^2-5}$$
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Et grafisk overblik kan skabes i =geogebra= vha kommandoerne
+- =RetningsFelt(2*x*y^2,15)=
+- =BeregnODE(2*x*y^2,(2,1))=
+
+#+attr_html: :width 600px
+[[file:img/2021-05-10_11-28-35_screenshot.png]]
+
+*** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+*Opgave 1* (Ping-pong-par)
+
+I hvilke tilfælde kan man anvende separation af de variable?
+1. $\frac{dy}{dx} = \frac{x+1}{y}$
+2. $\frac{dy}{dx} = x y +1$
+3. $\frac{dy}{dx} = \frac{x}{y+2}$
+4. $\frac{dy}{dx} + y = \frac{x+y^2}{y}$
+5. $\frac{dy}{dx} = x -y$
+6. $\frac{dy}{dx} = \frac{x-y-1}{y+1}+1$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+*Opgave 2* (Team-par-solo)
+
+Bestem med separation af de variable den fuldstændige løsning til følgende differentialligninger:
+1. $\frac{dy}{dx} = xy$
+2. $\frac{dy}{dx} = \left( x^2+ 4\right)y$
+3. $\frac{dy}{dx} = - \frac{y^2}{x+1}$
+4. $\frac{dy}{dx} = 2 \sqrt{y}$
+5. $\frac{dy}{dx} = e^{-2y}$
+6. $\frac{dy}{dx} = y^{-2}$
+7. $\frac{dy}{dx} = \frac{\cos(x)}{e^y}$
+8. $\frac{dy}{dx} = \frac{\sqrt{x}}{y}$
+9. $\frac{dy}{dx} = x \left( y-2 \right)$
+#+reveal_html: </div>
+*** Vi skulle vel aldrig have et lille bevis
+#+reveal_html: <div style="font-size: 60%;">
+Læs følgende bevis, men brug *Rollelæsning*
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 300px
+[[./img/bevis.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+Rollelæsning:
+
+Fire roller: *Oplæser*, *Referent*, *Overskriftmester* og *sammenhængsmester*.
+
+1. Oplæser læser første del.
+2. Referenten giver et referat af det vigtigste indhold.
+3. Overskriftmesteren finder en dækkende overskrift, og skriver den ned.
+4. Sammenhængsmesteren forklarer sammenhængen med det forudgående eller prøver at forudsige, hvad der følger.
+5. Rollerne roterer med uret og næste afsnit læses.
+#+reveal_html: </div>
+
+
+
+** Lineære 1.ordens ordinære differentialligninger
+#+reveal_html: <div style="font-size: 60%;">
+Nu begynder det at blive lidt lakrids.
+
+$$\frac{dy}{dx} + P(x) \cdot y = Q(x)$$
+
+Vi benytter *Lyt-tegn-skriv*
+
+*** Lyt-tegn-skriv
+1. Lyt, mens stoffet forklares.
+2. Der stoppes op, og der udarbejdes en /afbildning/ (tegning/skitse, ligninger måske) af det vigtigste.
+3. Forklar afbildning til hinanden i teamet/par vha. *ordet rundt*.
+4. Skriv individuel opsummering med tekst ligninger.
+5. Forfra.
+
+*** Hold tungen lige i munden
+#+reveal_html: <div style="font-size: 60%;">
+$$\frac{dy}{dx} + P(x) \cdot y = Q(x)$$
+
+#+attr_reveal: :frag (appear)
+- Vi skal indføre en /magisk/ funktion, kaldet $\mu(x)$, som er en *integrationsfaktor*.
+- I skal ikke bekymre jer om, hvordan den ser ud lige nu.
+- Multiplicer alle led i differentialligningen med denne integratationsfaktor:
+
+#+attr_reveal: :frag (appear)
+$$\mu(x) \cdot \frac{dy}{dx} + \mu(x)\cdot P(x) y = \mu(x) \cdot Q(x)$$
+
+*** Det magiske ved $\mu(x)$
+#+reveal_html: <div style="font-size: 60%;">
+Det magiske ved $\mu(x)$ er, at det /antages/, at den opfylder betingelsen:
+
+$$\mu(x) \cdot P(x) = \mu'(x)$$
+
+#+attr_reveal: :frag (appear)
+- I skal stadig ikke bekymre jer om, hvordan $\mu(x)$ faktisk ser ud.
+- Nu kan vores differentialligning skrive som:
+#+attr_reveal: :frag (appear)
+\begin{align*}
+\frac{dy}{dx} + P(x) \cdot y &= Q(x) \\
+\mu(x) \cdot \frac{dy}{dx} + \boxed{\mu(x)\cdot P(x)}\cdot y &= \mu(x) \cdot Q(x) \\
+\mu(x) \cdot \frac{dy}{dx} + \boxed{\mu'(x)}\cdot y &= \mu(x) \cdot Q(x)
+\end{align*}
+
+*** Produktreglen for differentiation
+#+reveal_html: <div style="font-size: 60%;">
+Venstre side af differentialligningen er blot /produktreglen/
+$$\mu(x) \cdot \frac{dy}{dx} + \mu'(x) \cdot y = \frac{d}{dx} \left( \mu(x) \cdot y(x) \right)$$
+#+attr_reveal: :frag (appear)
+- Nu kan differentialligningen skrives som:
+#+attr_reveal: :frag (appear)
+\begin{align*}
+\mu(x) \cdot \frac{dy}{dx} + \mu'(x)\cdot y &= \mu(x) \cdot Q(x) \\
+\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) &=\mu(x) \cdot Q(x) 
+\end{align*}
+
+*** Husk, at vi leder efter $y(x)$
+#+reveal_html: <div style="font-size: 60%;">
+$$\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) =\mu(x) \cdot Q(x)$$
+Nu kan vi gøre noget ved differentialligningen for at få fat i $y(x)$.
+#+attr_reveal: :frag (appear)
+- Vi integrerer begge sider af differentialligningen mht $x$.
+#+attr_reveal: :frag (appear)
+\begin{align*}
+\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) &=\mu(x) \cdot Q(x)  \\
+\int \frac{d}{dx}\left( \mu(x) \cdot y(x) \right)\,dx &=\int \mu(x) \cdot Q(x)\, dx \\
+\mu(x) \cdot y(x) &=\int \mu(x) \cdot Q(x)\, dx + c_1 \\
+y(x) &=\frac{\int \mu(x) \cdot Q(x)\, dx + c_1}{\mu(x)}
+\end{align*}
+#+attr_reveal: :frag (appear)
+- Integrationskonstanten $c_1$ er /vigtig/ at huske!
+- Nu har vi løsningen til differentialligningen,
+- men vi mangler stadig at bestemme, hvad den magiske integrationsfaktor $\mu(x)$ skal være.
+  
+*** Nu kan $\mu(x)$ bestemmes
+#+reveal_html: <div style="font-size: 60%;">
+Vi skal bruge vores antagelse fra tidligere, nemlig
+$$\mu(x)\cdot P(x) = \mu'(x)$$
+#+attr_reveal: :frag (appear)
+- $\mu(x)$ kan findes vha /separation af variable/
+#+attr_reveal: :frag (appear)
+\begin{align*}
+\mu(x) \cdot P(x) &= \frac{d \mu}{dx} \\
+\int P(x) \,dx &= \int \frac{1}{\mu(x)} \,d \mu \\
+\int P(x) \,dx &= \ln \left( \mu(x) \right) + c_2 \\
+e^{\int P(x) \,dx -c_2} &= \mu(x) \\
+e^{\int P(x) \,dx}\cdot c_3 &= \mu(x) \\
+\end{align*}
+
+*** Nu kan det hele samles
+#+reveal_html: <div style="font-size: 60%;">
+Vi har den generelle løsning
+$$y(x) =\frac{\int \mu(x) \cdot Q(x)\, dx + c_1}{\mu(x)}$$
+og en måde at udregne integrationsfaktoren på
+$$\mu(x) = e^{\int P(x) \,dx}\cdot c_3$$
+#+attr_reveal: :frag (appear)
+- Lad os samle det.
+#+attr_reveal: :frag (appear)
+\begin{align*}
+y(x) &=\frac{\int e^{\int P(x) \,dx}\cdot c_3 \cdot Q(x)\, dx + c_1}{e^{\int P(x) \,dx}\cdot c_3} \\
+y(x) &=\frac{\int e^{\int P(x) \,dx} \cdot Q(x)\, dx + \frac{c_1}{c_3}}{e^{\int P(x) \,dx}} \\
+y(x) &=\frac{\int e^{\int P(x) \,dx} \cdot Q(x)\, dx + c}{e^{\int P(x) \,dx}}
+\end{align*}
+#+attr_reveal: :frag (appear)
+- den sidste omskrivning er blot for at finde en enkelt integrationskonstant.
+
+*** Konklusion
+#+reveal_html: <div style="font-size: 60%;">
+For en lineær differentialligning på formen
+$$\frac{dy}{dx} + P(x)\cdot y = Q(x)$$
+
+er løsningen givet ved
+$$y(x) = \frac{\int \mu(x) \cdot Q(x)\, dx+c}{\mu(x)}\,,$$
+hvor
+$$\mu(x) = e^{\int P(x) \,dx}$$
+
+#+attr_reveal: :frag (appear)
+En procedure er dog mere anvendelig end dette.
+
+*** Procedure
+#+reveal_html: <div style="font-size: 60%;">
+1. Omskriv differentialligningen, så den ligner
+   $$\frac{dy}{dx} + P(x) \cdot y = Q(x)$$
+2. Bestem integrationsfaktoren $\mu(x)$ via
+   $$\mu(x) = e^{\int P(x) \, dx}$$
+3. Multiplicér begge sider af differentialligningen med $\mu(x)$ og tjek, at venstresiden bliver til produktreglen (og skriv den på denne måde)
+   $$\frac{d}{dx}\left( \mu(x) \cdot y(x) \right)$$
+4. Integrér begge sider af differentialligningen og sørg for at have styr på integrationskonstanten.
+5. Isolér $y(x)$ i den fremkomne ligning.
+   
+   
+*** Eksempel
+#+reveal_html: <div style="font-size: 60%;">
+$$\frac{dy}{dx} = 9.8 - 0.196 \cdot y$$
+#+attr_reveal: :frag (appear)
+1. omskrivning $$\frac{dy}{dx} +0.196\cdot y = 9.8$$
+2. $\mu(x)=e^{\int P(x)dx}$ $$\mu(x) = e^{\int 0.196 \, dx} = e^{0.196 x}$$
+3. Multiplicér
+   \begin{align*} e^{0.196x}\cdot \frac{dy}{dx} +e^{0.196x}\cdot 0.196 \cdot y &=e^{0.196x}\cdot 9.8\\ \frac{d}{dx}\left( e^{0.196x}\cdot y \right) &= e^{0.196x}\cdot 9.8 \end{align*}
+   
+#+reveal: split
+
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+4. [@4] Integrér
+   \begin{align*}e^{0.196x}\cdot y  &= \int e^{0.196x} \cdot 9.8 \,dx \\e^{0.196x}\cdot y &=9.8\cdot \frac{e^{0.196x}}{0.196} +c_1\end{align*}
+5. Isolér y
+   \begin{align*} y &= \frac{9.8\cdot e^{0.196x}}{0.196\cdot e^{0.196x}} + \frac{c_1}{e^{0.196x}} \\ y &=\frac{9.8}{0.196} + \frac{c_1}{e^{0.196x}}\\ y &= 50.0 + c_1 \cdot e^{-0.196 x}\end{align*}
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+$$y = 50.0 + c_1\cdot e^{-0.196x}$$
+Vi kan også tilføje begyndelses/randbetingelser.
+#+attr_reveal: :frag (appear)
+Løsningskurven skal gå gennem $(0,48)$
+#+attr_reveal: :frag (appear)
+1. Indsætter 0 på x's plads og 48 på y's plads $$48= 50.0 + c_1\cdot e^{-0.196\cdot 0}=50.0-c_1$$
+2. Isolerer $c_1$ $$48 = 50.0 + c_1 \iff c_1 =-2$$
+3. Den /specifikke/ løsning er da $$\boxed{y=50.0 -2\cdot e^{-0.196x}}$$
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Retningsfelt og løsningskurve
+
+#+attr_html: :width 600px
+[[./img/foerste_orden_lineaer_eksempel.png]]
+
+*Geogebra*:
+- =retningsfelt(9.8-0.196*y,15)=
+- =beregnode(9.8-0.196*y,(0,48))=
+*OBS*:
+$y'$ skal være isoleret og "højresiden" af diffligningen skal indtastes i geogebra.
+
+*** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+*Team-par-solo*
+
+(Hvis de fremkomne integraler er svære at løse, så brug CAS.)
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+*Opgave 1:*
+Løs differentialligningen
+$$y' -y - x \cdot e^x = 0$$
+
+*Opgave 2:*
+Løs differentialligningen
+$$y' - 2y = x$$
+
+*Opgave 3:*
+Løs differentialligningen
+$$x\cdot y' = y+2x^3$$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+*Opgave 4:*
+Løs differentialligningen
+$$x^2 y' + x \cdot y + 2 =0$$
+
+*Opgave 5:*
+Løs differentialligningen
+$$y' - y \cdot \tan (x) = \sin (x)\,,\text{ for } y(0)=1$$
+
+*Opgave 6:*
+Løs differentialligningen
+$$y' + \frac{3}{x} \cdot y= \frac{2}{x^2}\,,\text{ for } y(1)=2$$
+#+reveal_html: </div>
+

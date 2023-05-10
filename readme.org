@@ -1,0 +1,3 @@
+Dette er en præsentation til at supplere forberedelsesmaterialet om diskret matematik fra 2016 for matematik a htx.
+
+Find præsentationen på https://jacobdebel.github.io/diskret_matematik. 

@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Diskret matematik og differentialligninger</title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/sky.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="">
+<h2>Diskret matematik og differentialligninger</h2><h3></h3><h4></h4><h4></h4>
+</section>
+
+<section>
+<section id="slide-org7ea8504" data-background="">
+<h2 id="org7ea8504">Diskret matematik</h2>
+<div class="outline-text-2" id="text-org7ea8504">
+</div>
+</section>
+<section id="slide-org51b5517" data-background="">
+<h3 id="org51b5517">Hvorfor skal vi have det?</h3>
+
+</section>
+<section id="slide-org5276f0e" data-background="">
+<h3 id="org5276f0e">Bare fordi</h3>
+<p>
+I kan få opgaver til skriftlig eksamen som ligner denne:
+</p>
+
+
+<div id="org78d3402" class="figure">
+<p><img src="img/2021-12-06_10-38-28_screenshot.png" alt="2021-12-06_10-38-28_screenshot.png" height="400px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org187d064" data-background="">
+<h3 id="org187d064">Og fordi</h3>
+<p>
+I skal bruge det i jeres matematikprojekt om krig og Lanchesters love.
+</p>
+
+
+
+<div id="org066765a" class="figure">
+<p><img src="img/2021-12-06_10-42-46_screenshot.png" alt="2021-12-06_10-42-46_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+<div id="org0018c3f" class="figure">
+<p><img src="img/2021-12-06_10-42-58_screenshot.png" alt="2021-12-06_10-42-58_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+<div id="orgbcf9a9f" class="figure">
+<p><img src="img/2021-12-06_10-43-05_screenshot.png" alt="2021-12-06_10-43-05_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orga373192" data-background="">
+<h2 id="orga373192">Rekursionsligninger</h2>
+<div class="outline-text-2" id="text-orga373192">
+</div>
+</section>
+<section id="slide-orgb1dcd22" data-background="">
+<h3 id="orgb1dcd22">Førsteordens rekursionsligninger</h3>
+<div style="font-size: 60%;">
+
+<div id="org8121bc6" class="figure">
+<p><img src="img/2022-01-02_12-37-34_screenshot.png" alt="2022-01-02_12-37-34_screenshot.png" width="600px" />
+</p>
+</div>
+
+<p>
+Første orden betyder, at man kun behøver at kende én tidligere værdi, for at kunne udregne den efterfølgende. Hvis man skal kende to foregående værdier for at kunne udregne den næste, er der tale om en andenordens rekursionsligning. I kan selv gætte jer til, hvad højere ordener kræver.
+</p>
+
+</section>
+<section data-background="">
+<ul>
+<li>Læs Eksempel 2 og 3 på side 5 og 6.</li>
+
+<li>Sørg for at have styr på, at kunne opskrive et udtryk for \(f(y_n,n)\) for n!.</li>
+
+<li>Brug jeres viden til at kunne besvare <b>opgave 1</b> på side 6.</li>
+
+</ul>
+
+
+<div id="orgeda6aa5" class="figure">
+<p><img src="img/2022-01-03_09-18-26_screenshot.png" alt="2022-01-03_09-18-26_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+</section>
+<section data-background="">
+<p>
+<b>Begyndelsesbetingelser og entydighed</b>
+</p>
+
+<div style="font-size: 60%;">
+
+<div id="org7f20c33" class="figure">
+<p><img src="img/2022-01-02_12-58-29_screenshot.png" alt="2022-01-02_12-58-29_screenshot.png" width="600px" />
+</p>
+</div>
+
+<p>
+Ved at beslutte sig for, at der skal være en fast <i>begyndelsesbetingelse</i> er der kun en løsning til rekursionsligningerne.
+</p>
+
+<ul>
+<li>Følg eksempel 4 på side 7.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Løs opgave 2 og 3 på side 8.</li>
+
+</ul>
+
+
+<div id="orgc32b95b" class="figure">
+<p><img src="img/2022-01-03_09-19-14_screenshot.png" alt="2022-01-03_09-19-14_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org0201dd4" data-background="">
+<h3 id="org0201dd4">Førsteordens <b>lineære</b> rekursionsligninger</h3>
+<div style="font-size: 60%;">
+
+
+<div id="org7eb8716" class="figure">
+<p><img src="img/2022-01-02_20-02-43_screenshot.png" alt="2022-01-02_20-02-43_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Find nogle eksempler på rekursionsligninger, som opfylder disse betingelser, og nogen, som ikke gør, i teksten.</li>
+<li>Læg mærke til forskellen på <i>homogen</i> og <i>inhomogen</i>.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+
+<div style="font-size: 60%;">
+<p>
+<b>Samtlige løsninger</b>
+</p>
+<ul>
+<li>Nogle gange er det muligt at bestemme \(y_n\) til et bestemt \(n\) uden at udregne alle de forrige \(n-1\) værdier først.</li>
+
+</ul>
+
+
+<div id="orga69ddb0" class="figure">
+<p><img src="img/2022-01-02_20-59-12_screenshot.png" alt="2022-01-02_20-59-12_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Læs eksempel 5 på side 9 og 10 for at få en forklaring til dette.</li>
+
+</ul>
+
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Læs eksempel 6 på side 10 for at en idé til, hvordan konstanten \(k\) bestemmes ud fra en begyndelsesbetingelse.</li>
+<li>(Det svarer lidt til at bestemme en specifik værdi for integrationskonstant i et ubestemt integrale).</li>
+<li>Løs opgave 4 på side 11.</li>
+
+</ul>
+
+
+
+<div id="org4cf76d6" class="figure">
+<p><img src="img/2022-01-03_09-19-56_screenshot.png" alt="2022-01-03_09-19-56_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Læs den efterfølgende opsummering.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+<b>Samtlige løsninger til den <i>inhomogene</i> førsteordens lineære rekursionsligning</b>
+</p>
+
+
+<div id="org18a6889" class="figure">
+<p><img src="img/2022-01-02_21-07-04_screenshot.png" alt="2022-01-02_21-07-04_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>\(z_n\) kaldes en <i>partikulær løsning</i>.</li>
+<li>Samtlige løsninger til den inhomogene førsteordens lineære rekursionsligning er lig <i>summen</i> af samtlige løsninger til den tilsvarende <i>homogene</i> rekursionsligning og én partikulær løsning til den inhomogene rekursionsligning.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+<b>Hvordan finder man så en partikulær løsning?</b>
+</p>
+
+<ul>
+<li>I praksis kan man mange gange slippe afsted med at <i>gætte</i> sig til en løsning.</li>
+<li>Læs eksempel 7 side 12 for en <i>gættemetode</i> og løs selv opgave 5 også på side 12.</li>
+
+</ul>
+
+
+<div id="orgb768616" class="figure">
+<p><img src="img/2022-01-03_09-20-49_screenshot.png" alt="2022-01-03_09-20-49_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+<div id="org28694ae" class="figure">
+<p><img src="img/2022-01-03_09-20-57_screenshot.png" alt="2022-01-03_09-20-57_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Nogle gange kan man ikke altid bare gætte, og så må man bruge andre strategier. Løs opgave 6 side 13 for at blive klogere på dette.</li>
+
+</ul>
+
+
+<div id="org528a559" class="figure">
+<p><img src="img/2022-01-03_09-22-43_screenshot.png" alt="2022-01-03_09-22-43_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org496a469" data-background="">
+<h2 id="org496a469">Numerisk nulpunktsbestemmelse</h2>
+<ul>
+<li>Mange ligninger kan løses symbolsk/algebraisk, men ikke alle.</li>
+<li>De ligninger, som ikke har symbolske løsninger kaldes <i>transcendente</i> ligninger.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+
+<ul>
+<li><p>
+Et eksempel kunne være
+</p>
+
+<p>
+\[e^x=-x\]
+</p>
+
+<div id="org6de3255" class="figure">
+<p><img src="img/2022-01-03_09-00-49_screenshot.png" alt="2022-01-03_09-00-49_screenshot.png" width="600px" />
+</p>
+</div></li>
+
+</ul>
+
+</section>
+<section data-background="">
+<ul>
+<li>Transcendente ligninger skal i stedet løses <i>numerisk</i>.</li>
+<li>En numerisk løsningsmetode er <i>Newtons metode</i>.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org069859d" data-background="">
+<h2 id="org069859d">Newtons metode</h2>
+<div style="font-size: 60%;">
+<ul>
+<li><p>
+Den grundlæggende idé tager udgangspunkt i <i>tangenten</i> til en funktion f(x).
+</p>
+
+<p>
+\[T_{x_0} (x) = f'\left(x_0\right) \cdot \left( x - x_0 \right) + f(x_0)\]
+</p></li>
+
+<li>I et punkt \((x_0;y_0)\) går tangenten gennem punktet og ligner <i>tilnærmelsesvis</i> funktionen f(x), når x er tæt på \(x_0\).</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+
+<div id="org3613958" class="figure">
+<p><img src="img/2022-01-03_09-14-01_screenshot.png" alt="2022-01-03_09-14-01_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+<div id="org9b8ead0" class="figure">
+<p><img src="img/2022-01-03_09-16-35_screenshot.png" alt="2022-01-03_09-16-35_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Læs fra midt side 14 til toppen af side 17 for forklaringer.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Løs opgave 7 på side 17</li>
+
+</ul>
+
+
+<div id="org65a284f" class="figure">
+<p><img src="img/2022-01-03_09-29-48_screenshot.png" alt="2022-01-03_09-29-48_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Læs eksempel 9 side 17 og 18.</li>
+<li>Løs opgave 8 side 19, som tager udgangspunkt i eksempel 9.</li>
+
+</ul>
+
+
+<div id="orga93e3da" class="figure">
+<p><img src="img/2022-01-03_09-32-54_screenshot.png" alt="2022-01-03_09-32-54_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Løs opgave 9 side 19</li>
+
+</ul>
+
+
+<div id="orga47e8b5" class="figure">
+<p><img src="img/2022-01-03_09-33-47_screenshot.png" alt="2022-01-03_09-33-47_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org476e96a" data-background="">
+<h2 id="org476e96a">Tilnærmede løsninger af differentialligninger</h2>
+<div style="font-size: 60%;">
+<ul>
+<li>I har hørt det mange gange; Langt fra alle differentialligninger har en symbolsk/algebraisk løsning.</li>
+<li>I stedet kan disse løses <i>numerisk</i>.</li>
+<li>Den simpleste numeriske løsningsmetode til en førsteordens differentialligning hedder <i>Eulers metode</i>.</li>
+
+</ul>
+
+</section>
+<section id="slide-org8dce23c" data-background="">
+<h3 id="org8dce23c">Eulers metode</h3>
+<div style="font-size: 60%;">
+
+
+<div id="org53f3a3c" class="figure">
+<p><img src="img/2022-01-03_10-35-23_screenshot.png" alt="2022-01-03_10-35-23_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li>Dette siger dog ikke så meget, så læs eksempel 10 side 20 - 22 i stedet for.</li>
+<li>Læg mærke til, at Eulers metode <i>altid</i> vil ramme ved siden af det "rigtige".</li>
+<li>Ved at gøre skridtlængden h mindre, bliver fejlen dog også mindre.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Løs nu opgave 10 på side 23</li>
+
+</ul>
+
+
+
+<div id="org728700f" class="figure">
+<p><img src="img/2022-01-05_09-51-23_screenshot.png" alt="2022-01-05_09-51-23_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Læs først eksempel 11 på side 23, som bl.a. diskuterer at nogle differentialligninger/rekursionsligninger kan løses symbolsk, men at man ikke generelt kan opskrive en formel til bestemmelse af y-værdier ud fra n.</li>
+<li>Læs nu eksempel 12 side 24, som beskriver en rekursionsligning, der har en direkte formel som løsning.</li>
+<li>Til sidst, løs opgave 11 på side 24.</li>
+
+</ul>
+
+
+
+<div id="org9b98c08" class="figure">
+<p><img src="img/2022-01-05_09-59-38_screenshot.png" alt="2022-01-05_09-59-38_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orga6dde7b" data-background="">
+<h3 id="orga6dde7b">Alternativ forklaring af Eulers metode</h3>
+<div style="font-size: 60%;">
+<ul>
+<li>Man kan også forklare Eulers metode på følgende måde.</li>
+<li><p>
+Der er mange differentialligninger, som har tiden som den uafhængige variabel, og kan skrives Sommerferie
+</p>
+
+<p>
+\[\frac{dy}{dt} = f(t,y)\]
+</p></li>
+
+<li><p>
+Denne differentialligning kan vi i stedet skrive som en <i>differensligning</i>
+</p>
+
+<p>
+\[\frac{\Delta y}{\Delta t} = f(t,y)\]
+</p></li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+\[\frac{\Delta y}{\Delta t} = f(t,y)\]
+</p>
+<ul>
+<li>Vi husker at \(\Delta y = y_1 - y_0\)</li>
+<li>Eller mere generelt \(\Delta y = y_{n+1} - y_n\)</li>
+<li>\(\Delta t\) er skridtlængden og svarer til \(h\) fra tidligere.</li>
+
+</ul>
+
+<p>
+\[\frac{y_{n+1}-y_n}{\Delta t} = f(t,y)\]
+</p>
+
+
+<ul>
+<li>Nu kan \(y_{n+1}\) isoleres</li>
+
+</ul>
+
+<div>
+\begin{align*}
+\frac{y_{n+1}-y_n}{\Delta t} &= f(t,y) \\
+y_{n+1} - y_n &= f(t,y) \cdot \Delta t \\
+y_{n+1} &= f(t,y) \cdot \Delta t + y_n
+\end{align*}
+
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+\[y_{n+1} = f(t,y) \cdot \Delta t + y_n\]
+</p>
+</blockquote>
+<p>
+For at beregne den næste y-værdi skal man altså
+</p>
+<ul>
+<li>udregne værdien for \(f(t,y)\) i det nuværende (tids)punkt, hvor de nuværende værdier for t og y indsættes</li>
+<li>gang dette med skridtlængden (som gerne skal være så lille som mulig, for at mindske fejl.</li>
+<li>læg dette til den forrige y-værdi.</li>
+
+</ul>
+
+
+<p>
+Så simpelt er det. :)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgd41cb19" data-background="">
+<h2 id="orgd41cb19">Differentialligninger</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgda6233d" data-background="">
+<h2 id="orgda6233d">Hvorfor skal vi undervises i differentialligninger?</h2>
+</section>
+<section data-background="">
+
+<iframe width="600" height="400" src="https://www.youtube.com/embed/ifbaAqfqpc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+Linket er: <a href="https://youtu.be/ifbaAqfqpc4">https://youtu.be/ifbaAqfqpc4</a>
+</p>
+
+</section>
+<section data-background="">
+<p>
+Resten af siderne er bare genbrug fra tidligere, da vi arbejdede med differentialligninger sidst.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org70e18ea" data-background="">
+<h2 id="org70e18ea">Forskellige typer</h2>
+<div class="outline-text-2" id="text-org70e18ea">
+</div>
+</section>
+<section id="slide-org2ed1a44" data-background="">
+<h3 id="org2ed1a44">Eksponentiel vækst</h3>
+<div style="font-size: 60%;">
+<p>
+Differentialkvotienten er <i>proportionel</i> med funktionen selv.
+</p>
+
+<p>
+Differentialligning
+\[y'=k \cdot y\]
+</p>
+
+<p>
+Løsning
+\[y=c \cdot e^{k\cdot x}\]
+</p>
+
+<p>
+\(k\) er vækstkonstanten
+</p>
+
+<p>
+\(c\) er en integrationskonstant
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Grafiske eksempler
+</p>
+
+
+<div id="org9f20952" class="figure">
+<p><img src="./img/eksp_vaekst.png" alt="eksp_vaekst.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org303c2d0" data-background="">
+<h3 id="org303c2d0">Forskudt eksponentiel vækst</h3>
+<div style="font-size: 60%;">
+<p>
+Differentialkvotienten er <i>lineært afhængig</i> af funktionen selv.
+</p>
+
+<p>
+Differentialligning
+\[y'=a\cdot y +b\]
+</p>
+
+<p>
+Løsning
+\[y=-\frac{b}{a} + c\cdot e^{a\cdot x}\]
+</p>
+
+<p>
+\(- \frac{b}{a}\) angiver en vandret asymptote, som kan parallelforskyde en "almindelige" eksponentialfunktion og eller ned ad y-aksen.
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Grafiske eksempler
+</p>
+
+
+<div id="org96d511d" class="figure">
+<p><img src="./img/forskudt_eksp_vaekst.png" alt="forskudt_eksp_vaekst.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org586e6f1" data-background="">
+<h3 id="org586e6f1">Logistisk vækst</h3>
+<div style="font-size: 60%;">
+<p>
+Eksponentiel vækst med begrænsning.
+</p>
+
+<p>
+Tre forskellige differentialligninger til at beskrive den samme vækst.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-left">Diffligning</th>
+<th scope="col" class="org-left">Løsning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">\(y' = k \cdot y (a - y)\)</td>
+<td class="org-left">\(y=\frac{a}{1+c \cdot e^{-k a x}}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">\(y' = y (b - a y)\)</td>
+<td class="org-left">\(y=\frac{\frac{b}{a}}{1+c e^{-b x}}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">\(y' = k \cdot y \cdot \frac{(K - y)}{K}\)</td>
+<td class="org-left">\(y=\frac{K}{1+c\cdot e^{-k \cdot x}}\)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Særligt nr. 3 giver fysisk mening.
+</p>
+
+<p>
+Differentialligning 
+\[y' = k \cdot y \cdot \frac{(K - y)}{K}\]
+</p>
+
+<p>
+Løsning
+\[y=\frac{K}{1+c\cdot e^{-k \cdot x}}\]
+</p>
+
+<p>
+\(k\) er den samme  vækstkonstant, som for almindelig eksponentiel vækst, mens \(K\) er maksimal værdi for \(y\). \(y=K\) og \(y=0\) er altså begge vandrette asymptoter, som begrænser væksten.
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Grafiske eksempler
+</p>
+
+
+<div id="org33fc434" class="figure">
+<p><img src="./img/logistisk_vaekst.png" alt="logistisk_vaekst.png" width="1200px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3844646" data-background="">
+<h2 id="org3844646">Tjek at løsningerne faktisk er sande</h2>
+<div style="font-size: 60%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-left">Diffligning</th>
+<th scope="col" class="org-left">Løsning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">\(y'=k \cdot y\)</td>
+<td class="org-left">\(y=c \cdot e^{k\cdot x}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">\(y'=a\cdot y +b\)</td>
+<td class="org-left">\(y=-\frac{b}{a} + c\cdot e^{a\cdot x}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">\(y' = k \cdot y (a - y)\)</td>
+<td class="org-left">\(y=\frac{a}{1+c \cdot e^{-k a x}}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">\(y' = y (b - a y)\)</td>
+<td class="org-left">\(y=\frac{\frac{b}{a}}{1+c e^{-b x}}\)</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">\(y' = k \cdot y \cdot \frac{(K- y)}{K}\)</td>
+<td class="org-left">\(y=\frac{K}{1+c\cdot e^{-k \cdot x}}\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Indsæt de tilhørende løsninger i de respektive differentialligninger, og tjek om ligningen er <i>sand</i>.</li>
+<li>Der skal altså differentieres på venstre side.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org522a75b" data-background="">
+<h2 id="org522a75b">Grafisk Undersøgelse</h2>
+<div class="outline-text-2" id="text-org522a75b">
+</div>
+</section>
+<section id="slide-org5a21dde" data-background="">
+<h3 id="org5a21dde">Linjeelementer</h3>
+<div style="font-size: 60%;">
+<p>
+Et linje element er et kendt punkt på en graf med tilhørende hældning. Hvis \(x_0\) er et kendt x-koordinat så kan et linjeelement skrives som
+</p>
+
+<p>
+\[(x_0\,,\,f(x_0) \,;\, f'(x_0))\]
+</p>
+</section>
+<section id="slide-org65abf28" data-background="">
+<h4 id="org65abf28">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+For differentialligningen
+</p>
+
+<p>
+\[y' = 2\cdot y -10\]
+</p>
+
+<p>
+skal vi finde linjeelementerne i hhv A(-3,5) , B(-2,8) , C(1,3) og D(2,-2).
+</p>
+
+<ul>
+<li class="fragment appear">A: \(y'=2 \cdot 5-10 = 0\) Ergo \((-3\,,\,-5\,;\, 0)\)</li>
+<li class="fragment appear">B: \(y'=2 \cdot 8 -10 = 6\) Ergo \((-2\,,\,8\,;\, 6)\)</li>
+<li class="fragment appear">C: \(y'=2 \cdot 3 -10 = -4\) Ergo \((1\,,\,3\,;\, -4)\)</li>
+<li class="fragment appear">D: \(y'=2 \cdot (-2) -10 = -14\) Ergo \((2\,,\,-2\,;\, -14)\)</li>
+
+</ul>
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Grafisk er det nemmest at anvende geogebras funktion <code>retningsfelt</code>.
+</p>
+
+<p>
+<code>Retningsfelt(2*y-10,10)</code> giver følgende:
+</p>
+
+
+<div id="orgb304e9e" class="figure">
+<p><img src="./img/retningsfelt.png" alt="retningsfelt.png" width="600px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgea7ff45" data-background="">
+<h2 id="orgea7ff45">Løsning af differentialligninger</h2>
+<div class="outline-text-2" id="text-orgea7ff45">
+</div>
+</section>
+<section id="slide-org88fdcf8" data-background="">
+<h3 id="org88fdcf8">1. år på uni</h3>
+<div style="font-size: 40%;">
+<blockquote>
+<p>
+When you battle differential equations you better wear
+</p>
+
+<p>
+S H I E L D S
+</p>
+</blockquote>
+
+<iframe
+width="600"
+height="400"
+src="https://www.youtube.com/embed/jb9U-ZOlvDs"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<p>
+Linket er: <a href="https://youtu.be/jb9U-ZOlvDs">https://youtu.be/jb9U-ZOlvDs</a>
+</p>
+
+</section>
+<section data-background="">
+<p>
+Vi kommer til at arbejde med.
+</p>
+<ul>
+<li><b>S</b> eparable</li>
+<li data-fragment-index="1" class="fragment fade-out"><b>H</b> omogeneous</li>
+<li data-fragment-index="1" class="fragment fade-out"><b>I</b> ntegrating factor</li>
+<li data-fragment-index="1" class="fragment fade-out"><b>E</b> xact</li>
+<li><b>L</b> inear</li>
+<li><b>D</b> irect</li>
+<li data-fragment-index="1" class="fragment fade-out"><b>S</b> ubstitution</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<p>
+Men i rækkefølgen
+</p>
+<ul>
+<li><b>D</b> irect</li>
+<li><b>S</b> eparable</li>
+<li><b>L</b> inear</li>
+
+</ul>
+
+</section>
+<section id="slide-orgfaffffc" data-background="">
+<h3 id="orgfaffffc">Direkte løsninger</h3>
+<div style="font-size: 60%;">
+<p>
+Hvis højresiden af differentialligningen ikke afhænger af \(y\), men kun af funktioner af x eller konstanter, kan differentialligningen løses ved (simpel) integration. Altså på formen:
+\[y' = f(x)\]
+</p>
+</section>
+<section id="slide-orge75bceb" data-background="">
+<h4 id="orge75bceb">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+Vi skal løse
+\[\frac{dy}{dx} = 4 e^x + \sin (x)\]
+</p>
+
+<p class="fragment (appear)">
+\[\int \frac{dy}{dx} \,dx = \int 4 e^x + \sin (x)\, dx\]
+</p>
+<p class="fragment (appear)">
+\[y = \int 4 e^x + \sin (x)\, dx\]
+</p>
+<p class="fragment (appear)">
+\[y = 4 e^x - \cos (x) + c\]
+</p>
+
+</section>
+<section id="slide-orgc3462d8" data-background="">
+<h4 id="orgc3462d8">Opgaver <b>Team-par-solo</b></h4>
+<div style="font-size: 60%;">
+<p>
+Bestem den fuldstændige løsning til følgende differentialligninger:
+</p>
+
+<ol>
+<li>\(\frac{d}{dx}f = \cos \left( x \right)\)</li>
+<li>\(f'(x) = 2 x^5\)</li>
+<li>\(\frac{d}{dx}f = k\)</li>
+<li>\(\frac{d}{dt}f(t) = 6t\)</li>
+<li>\(\frac{d}{dx}f = 2x^3+4 x^{-2}\)</li>
+
+</ol>
+</section>
+<section id="slide-orgfb2745b" data-background="">
+<h4 id="orgfb2745b">Opgaver <b>Chef og sekretær</b></h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 60%">
+<blockquote>
+<ol>
+<li>trin: Chefen giver trin-for-trin instruktioner til sekretæren</li>
+<li>trin: Sekretæren nedskriver chefens løsning, eller udfører hans instruktion trin for trin.</li>
+<li>trin: Sektretæren roser chefen, hvis instruktionen fører til en løsning. Ellers hjælper sektretæren med at få løst opgaven og roser stadig chefen.</li>
+<li>trin: Roller byttes.</li>
+
+</ol>
+</blockquote>
+</div>
+
+<div class="column" style="float:right; width: 40%">
+<p>
+Bestem den fuldstændige løsning til følgende differentialligninger:
+</p>
+
+<ol>
+<li>\(\frac{d}{dx}f = e^x\)</li>
+<li>\(\frac{d}{dx}f = 3 \sin \left( x \right)\)</li>
+<li>\(2 \cdot f'(x)= x^{-5}+3\)</li>
+<li>\(\frac{d}{dx}f = \sqrt{x-8}\)</li>
+
+</ol>
+</div>
+</section>
+<section id="slide-org15069f5" data-background="">
+<h3 id="org15069f5">Separation af variable</h3>
+<div style="font-size: 60%;">
+<p>
+Hvis differentialligningen kan skrives op som
+</p>
+
+<p>
+\[\frac{d y}{d x} = f(y)\cdot g(x)\]
+</p>
+
+<p>
+kan den løses sådan her:
+</p>
+
+<p>
+\[\int \frac{1}{f(y)} \, dy = \int g(x) \, dx\]
+</p>
+</section>
+<section id="slide-orgfd0aa15" data-background="">
+<h4 id="orgfd0aa15">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+Vi skal løse følgende differentialligning med tilhørende betingelse:
+</p>
+
+<p>
+\[\frac{d y}{dx} = 2 x y^2 \,,\, y(2)=1\]
+</p>
+
+<p class="fragment (appear)">
+Vi separerer med y'erne på venstre side og x'erne på højre
+</p>
+
+<p class="fragment (appear)">
+\[\int \frac{1}{y^2} \, dy = \int 2 x \, dx\]
+</p>
+<p class="fragment (appear)">
+og integrerer
+</p>
+<p class="fragment (appear)">
+\[\int \frac{1}{y^2} \,dx = \int y^{-2}\,dx = \frac{y^{-1}}{-1} + k_1 = - \frac{1}{y} + k_1\]
+</p>
+
+<p class="fragment (appear)">
+\[\int 2x \,dx = x^2 + k_2\]
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Det hele sættes sammen igen.
+</p>
+<p class="fragment (appear)">
+\[- \frac{1}{y}+k_1 = x^2+k_2\]
+</p>
+<p class="fragment (appear)">
+Integrationskonstanterne lægges sammen til én konstant \(k\) og y isoleres
+</p>
+<p class="fragment (appear)">
+\[y=\frac{-1}{x^2+k}\]
+</p>
+<p class="fragment (appear)">
+Den partikulære løsning findes ved at indsætte oplysningerne fra opgaven i den fundne generelle løsning og isolere \(k\).
+</p>
+<p class="fragment (appear)">
+\[1 = \frac{-1}{2^2+k}\to 4 + k = -1 \to k = -5 \]
+</p>
+<p class="fragment (appear)">
+Den partikulære løsning er da:
+\[y = f(x) = \frac{-1}{x^2-5}\]
+</p>
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Et grafisk overblik kan skabes i <code>geogebra</code> vha kommandoerne
+</p>
+<ul>
+<li><code>RetningsFelt(2*x*y^2,15)</code></li>
+<li><code>BeregnODE(2*x*y^2,(2,1))</code></li>
+
+</ul>
+
+
+<div id="org8b14f15" class="figure">
+<p><img src="img/2021-05-10_11-28-35_screenshot.png" alt="2021-05-10_11-28-35_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orga6f606c" data-background="">
+<h4 id="orga6f606c">Opgaver</h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Opgave 1</b> (Ping-pong-par)
+</p>
+
+<p>
+I hvilke tilfælde kan man anvende separation af de variable?
+</p>
+<ol>
+<li>\(\frac{dy}{dx} = \frac{x+1}{y}\)</li>
+<li>\(\frac{dy}{dx} = x y +1\)</li>
+<li>\(\frac{dy}{dx} = \frac{x}{y+2}\)</li>
+<li>\(\frac{dy}{dx} + y = \frac{x+y^2}{y}\)</li>
+<li>\(\frac{dy}{dx} = x -y\)</li>
+<li>\(\frac{dy}{dx} = \frac{x-y-1}{y+1}+1\)</li>
+
+</ol>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Opgave 2</b> (Team-par-solo)
+</p>
+
+<p>
+Bestem med separation af de variable den fuldstændige løsning til følgende differentialligninger:
+</p>
+<ol>
+<li>\(\frac{dy}{dx} = xy\)</li>
+<li>\(\frac{dy}{dx} = \left( x^2+ 4\right)y\)</li>
+<li>\(\frac{dy}{dx} = - \frac{y^2}{x+1}\)</li>
+<li>\(\frac{dy}{dx} = 2 \sqrt{y}\)</li>
+<li>\(\frac{dy}{dx} = e^{-2y}\)</li>
+<li>\(\frac{dy}{dx} = y^{-2}\)</li>
+<li>\(\frac{dy}{dx} = \frac{\cos(x)}{e^y}\)</li>
+<li>\(\frac{dy}{dx} = \frac{\sqrt{x}}{y}\)</li>
+<li>\(\frac{dy}{dx} = x \left( y-2 \right)\)</li>
+
+</ol>
+</div>
+</section>
+<section id="slide-orgce68b88" data-background="">
+<h4 id="orgce68b88">Vi skulle vel aldrig have et lille bevis</h4>
+<div style="font-size: 60%;">
+<p>
+Læs følgende bevis, men brug <b>Rollelæsning</b>
+</p>
+
+<div class="column" style="float:left; width: 50%">
+
+<div id="org9c1bd1b" class="figure">
+<p><img src="./img/bevis.png" alt="bevis.png" width="300px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Rollelæsning:
+</p>
+
+<p>
+Fire roller: <b>Oplæser</b>, <b>Referent</b>, <b>Overskriftmester</b> og <b>sammenhængsmester</b>.
+</p>
+
+<ol>
+<li>Oplæser læser første del.</li>
+<li>Referenten giver et referat af det vigtigste indhold.</li>
+<li>Overskriftmesteren finder en dækkende overskrift, og skriver den ned.</li>
+<li>Sammenhængsmesteren forklarer sammenhængen med det forudgående eller prøver at forudsige, hvad der følger.</li>
+<li>Rollerne roterer med uret og næste afsnit læses.</li>
+
+</ol>
+</div>
+
+
+
+</section>
+<section id="slide-org4dab620" data-background="">
+<h3 id="org4dab620">Lineære 1.ordens ordinære differentialligninger</h3>
+<div style="font-size: 60%;">
+<p>
+Nu begynder det at blive lidt lakrids.
+</p>
+
+<p>
+\[\frac{dy}{dx} + P(x) \cdot y = Q(x)\]
+</p>
+
+<p>
+Vi benytter <b>Lyt-tegn-skriv</b>
+</p>
+
+</section>
+<section id="slide-orgaddc18b" data-background="">
+<h4 id="orgaddc18b">Lyt-tegn-skriv</h4>
+<ol>
+<li>Lyt, mens stoffet forklares.</li>
+<li>Der stoppes op, og der udarbejdes en <i>afbildning</i> (tegning/skitse, ligninger måske) af det vigtigste.</li>
+<li>Forklar afbildning til hinanden i teamet/par vha. <b>ordet rundt</b>.</li>
+<li>Skriv individuel opsummering med tekst ligninger.</li>
+<li>Forfra.</li>
+
+</ol>
+
+</section>
+<section id="slide-org2dda309" data-background="">
+<h4 id="org2dda309">Hold tungen lige i munden</h4>
+<div style="font-size: 60%;">
+<p>
+\[\frac{dy}{dx} + P(x) \cdot y = Q(x)\]
+</p>
+
+<ul>
+<li class="fragment appear">Vi skal indføre en <i>magisk</i> funktion, kaldet \(\mu(x)\), som er en <b>integrationsfaktor</b>.</li>
+<li class="fragment appear">I skal ikke bekymre jer om, hvordan den ser ud lige nu.</li>
+<li class="fragment appear">Multiplicer alle led i differentialligningen med denne integratationsfaktor:</li>
+
+</ul>
+
+<p class="fragment (appear)">
+\[\mu(x) \cdot \frac{dy}{dx} + \mu(x)\cdot P(x) y = \mu(x) \cdot Q(x)\]
+</p>
+
+</section>
+<section id="slide-orgbf891f9" data-background="">
+<h4 id="orgbf891f9">Det magiske ved \(\mu(x)\)</h4>
+<div style="font-size: 60%;">
+<p>
+Det magiske ved \(\mu(x)\) er, at det <i>antages</i>, at den opfylder betingelsen:
+</p>
+
+<p>
+\[\mu(x) \cdot P(x) = \mu'(x)\]
+</p>
+
+<ul>
+<li class="fragment appear">I skal stadig ikke bekymre jer om, hvordan \(\mu(x)\) faktisk ser ud.</li>
+<li class="fragment appear">Nu kan vores differentialligning skrive som:</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+\frac{dy}{dx} + P(x) \cdot y &= Q(x) \\
+\mu(x) \cdot \frac{dy}{dx} + \boxed{\mu(x)\cdot P(x)}\cdot y &= \mu(x) \cdot Q(x) \\
+\mu(x) \cdot \frac{dy}{dx} + \boxed{\mu'(x)}\cdot y &= \mu(x) \cdot Q(x)
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-orgccd5f74" data-background="">
+<h4 id="orgccd5f74">Produktreglen for differentiation</h4>
+<div style="font-size: 60%;">
+<p>
+Venstre side af differentialligningen er blot <i>produktreglen</i>
+\[\mu(x) \cdot \frac{dy}{dx} + \mu'(x) \cdot y = \frac{d}{dx} \left( \mu(x) \cdot y(x) \right)\]
+</p>
+<ul>
+<li class="fragment appear">Nu kan differentialligningen skrives som:</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+\mu(x) \cdot \frac{dy}{dx} + \mu'(x)\cdot y &= \mu(x) \cdot Q(x) \\
+\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) &=\mu(x) \cdot Q(x) 
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-org3a787f6" data-background="">
+<h4 id="org3a787f6">Husk, at vi leder efter \(y(x)\)</h4>
+<div style="font-size: 60%;">
+<p>
+\[\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) =\mu(x) \cdot Q(x)\]
+Nu kan vi gøre noget ved differentialligningen for at få fat i \(y(x)\).
+</p>
+<ul>
+<li class="fragment appear">Vi integrerer begge sider af differentialligningen mht \(x\).</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+\frac{d}{dx}\left( \mu(x) \cdot y(x) \right) &=\mu(x) \cdot Q(x)  \\
+\int \frac{d}{dx}\left( \mu(x) \cdot y(x) \right)\,dx &=\int \mu(x) \cdot Q(x)\, dx \\
+\mu(x) \cdot y(x) &=\int \mu(x) \cdot Q(x)\, dx + c_1 \\
+y(x) &=\frac{\int \mu(x) \cdot Q(x)\, dx + c_1}{\mu(x)}
+\end{align*}
+
+</div>
+<ul>
+<li class="fragment appear">Integrationskonstanten \(c_1\) er <i>vigtig</i> at huske!</li>
+<li class="fragment appear">Nu har vi løsningen til differentialligningen,</li>
+<li class="fragment appear">men vi mangler stadig at bestemme, hvad den magiske integrationsfaktor \(\mu(x)\) skal være.</li>
+
+</ul>
+
+</section>
+<section id="slide-org338d9a1" data-background="">
+<h4 id="org338d9a1">Nu kan \(\mu(x)\) bestemmes</h4>
+<div style="font-size: 60%;">
+<p>
+Vi skal bruge vores antagelse fra tidligere, nemlig
+\[\mu(x)\cdot P(x) = \mu'(x)\]
+</p>
+<ul>
+<li class="fragment appear">\(\mu(x)\) kan findes vha <i>separation af variable</i></li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+\mu(x) \cdot P(x) &= \frac{d \mu}{dx} \\
+\int P(x) \,dx &= \int \frac{1}{\mu(x)} \,d \mu \\
+\int P(x) \,dx &= \ln \left( \mu(x) \right) + c_2 \\
+e^{\int P(x) \,dx -c_2} &= \mu(x) \\
+e^{\int P(x) \,dx}\cdot c_3 &= \mu(x) \\
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-org010556d" data-background="">
+<h4 id="org010556d">Nu kan det hele samles</h4>
+<div style="font-size: 60%;">
+<p>
+Vi har den generelle løsning
+\[y(x) =\frac{\int \mu(x) \cdot Q(x)\, dx + c_1}{\mu(x)}\]
+og en måde at udregne integrationsfaktoren på
+\[\mu(x) = e^{\int P(x) \,dx}\cdot c_3\]
+</p>
+<ul>
+<li class="fragment appear">Lad os samle det.</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+y(x) &=\frac{\int e^{\int P(x) \,dx}\cdot c_3 \cdot Q(x)\, dx + c_1}{e^{\int P(x) \,dx}\cdot c_3} \\
+y(x) &=\frac{\int e^{\int P(x) \,dx} \cdot Q(x)\, dx + \frac{c_1}{c_3}}{e^{\int P(x) \,dx}} \\
+y(x) &=\frac{\int e^{\int P(x) \,dx} \cdot Q(x)\, dx + c}{e^{\int P(x) \,dx}}
+\end{align*}
+
+</div>
+<ul>
+<li class="fragment appear">den sidste omskrivning er blot for at finde en enkelt integrationskonstant.</li>
+
+</ul>
+
+</section>
+<section id="slide-org832d644" data-background="">
+<h4 id="org832d644">Konklusion</h4>
+<div style="font-size: 60%;">
+<p>
+For en lineær differentialligning på formen
+\[\frac{dy}{dx} + P(x)\cdot y = Q(x)\]
+</p>
+
+<p>
+er løsningen givet ved
+\[y(x) = \frac{\int \mu(x) \cdot Q(x)\, dx+c}{\mu(x)}\,,\]
+hvor
+\[\mu(x) = e^{\int P(x) \,dx}\]
+</p>
+
+<p class="fragment (appear)">
+En procedure er dog mere anvendelig end dette.
+</p>
+
+</section>
+<section id="slide-org1b52540" data-background="">
+<h4 id="org1b52540">Procedure</h4>
+<div style="font-size: 60%;">
+<ol>
+<li>Omskriv differentialligningen, så den ligner
+\[\frac{dy}{dx} + P(x) \cdot y = Q(x)\]</li>
+<li>Bestem integrationsfaktoren \(\mu(x)\) via
+\[\mu(x) = e^{\int P(x) \, dx}\]</li>
+<li>Multiplicér begge sider af differentialligningen med \(\mu(x)\) og tjek, at venstresiden bliver til produktreglen (og skriv den på denne måde)
+\[\frac{d}{dx}\left( \mu(x) \cdot y(x) \right)\]</li>
+<li>Integrér begge sider af differentialligningen og sørg for at have styr på integrationskonstanten.</li>
+<li>Isolér \(y(x)\) i den fremkomne ligning.</li>
+
+</ol>
+
+
+</section>
+<section id="slide-orge3fd488" data-background="">
+<h4 id="orge3fd488">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+\[\frac{dy}{dx} = 9.8 - 0.196 \cdot y\]
+</p>
+<ol>
+<li class="fragment appear">omskrivning \[\frac{dy}{dx} +0.196\cdot y = 9.8\]</li>
+<li class="fragment appear">\(\mu(x)=e^{\int P(x)dx}\) \[\mu(x) = e^{\int 0.196 \, dx} = e^{0.196 x}\]</li>
+<li class="fragment appear"><p>
+Multiplicér
+</p>
+<div>
+\begin{align*} e^{0.196x}\cdot \frac{dy}{dx} +e^{0.196x}\cdot 0.196 \cdot y &=e^{0.196x}\cdot 9.8\\ \frac{d}{dx}\left( e^{0.196x}\cdot y \right) &= e^{0.196x}\cdot 9.8 \end{align*}
+
+</div></li>
+
+</ol>
+
+</section>
+<section data-background="">
+
+<div style="font-size: 60%;">
+<ol>
+<li class="fragment appear" value="4"><p>
+Integrér
+</p>
+<div>
+\begin{align*}e^{0.196x}\cdot y  &= \int e^{0.196x} \cdot 9.8 \,dx \\e^{0.196x}\cdot y &=9.8\cdot \frac{e^{0.196x}}{0.196} +c_1\end{align*}
+
+</div></li>
+<li class="fragment appear"><p>
+Isolér y
+</p>
+<div>
+\begin{align*} y &= \frac{9.8\cdot e^{0.196x}}{0.196\cdot e^{0.196x}} + \frac{c_1}{e^{0.196x}} \\ y &=\frac{9.8}{0.196} + \frac{c_1}{e^{0.196x}}\\ y &= 50.0 + c_1 \cdot e^{-0.196 x}\end{align*}
+
+</div></li>
+
+</ol>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+\[y = 50.0 + c_1\cdot e^{-0.196x}\]
+Vi kan også tilføje begyndelses/randbetingelser.
+</p>
+<p class="fragment (appear)">
+Løsningskurven skal gå gennem \((0,48)\)
+</p>
+<ol>
+<li class="fragment appear">Indsætter 0 på x's plads og 48 på y's plads \[48= 50.0 + c_1\cdot e^{-0.196\cdot 0}=50.0-c_1\]</li>
+<li class="fragment appear">Isolerer \(c_1\) \[48 = 50.0 + c_1 \iff c_1 =-2\]</li>
+<li class="fragment appear">Den <i>specifikke</i> løsning er da \[\boxed{y=50.0 -2\cdot e^{-0.196x}}\]</li>
+
+</ol>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Retningsfelt og løsningskurve
+</p>
+
+
+<div id="org8333a7f" class="figure">
+<p><img src="./img/foerste_orden_lineaer_eksempel.png" alt="foerste_orden_lineaer_eksempel.png" width="600px" />
+</p>
+</div>
+
+<p>
+<b>Geogebra</b>:
+</p>
+<ul>
+<li><code>retningsfelt(9.8-0.196*y,15)</code></li>
+<li><code>beregnode(9.8-0.196*y,(0,48))</code></li>
+
+</ul>
+<p>
+<b>OBS</b>:
+\(y'\) skal være isoleret og "højresiden" af diffligningen skal indtastes i geogebra.
+</p>
+
+</section>
+<section id="slide-org514b5ed" data-background="">
+<h4 id="org514b5ed">Opgaver</h4>
+<div style="font-size: 60%;">
+<p>
+<b>Team-par-solo</b>
+</p>
+
+<p>
+(Hvis de fremkomne integraler er svære at løse, så brug CAS.)
+</p>
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Opgave 1:</b>
+Løs differentialligningen
+\[y' -y - x \cdot e^x = 0\]
+</p>
+
+<p>
+<b>Opgave 2:</b>
+Løs differentialligningen
+\[y' - 2y = x\]
+</p>
+
+<p>
+<b>Opgave 3:</b>
+Løs differentialligningen
+\[x\cdot y' = y+2x^3\]
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Opgave 4:</b>
+Løs differentialligningen
+\[x^2 y' + x \cdot y + 2 =0\]
+</p>
+
+<p>
+<b>Opgave 5:</b>
+Løs differentialligningen
+\[y' - y \cdot \tan (x) = \sin (x)\,,\text{ for } y(0)=1\]
+</p>
+
+<p>
+<b>Opgave 6:</b>
+Løs differentialligningen
+\[y' + \frac{3}{x} \cdot y= \frac{2}{x^2}\,,\text{ for } y(1)=2\]
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>
